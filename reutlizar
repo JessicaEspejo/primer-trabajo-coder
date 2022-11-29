@@ -1,0 +1,68 @@
+
+
+<div class="contenedor_loader">
+    <div id="loader"></div>
+ </div>
+    <div class="containero">
+        <div class="title">
+        
+            </div>
+            <div class="col-6">
+              
+                <form class=" needs-validation"  id="formul">
+                    <section class="form-register">
+                        <h4>Calculá Tu Préstamo</h4>
+                      <input type="text" class="controls" id="nombreId" placeholder="Ingresa tu nombre completo" required>
+                      <input type="text" class="controls" id="nombreId" placeholder="Ingresa tu apellido completo" required>
+                      <input type="email" class="controls" id="emailInput" placeholder="Por favor,Ingresa tu email">
+                  
+                <div class="input-group has-validation">
+                    <span class="Valo" id="inputGroupPrepend">$</span>
+                     <input type="text" class="form-control      controls" id="monto" placeholder="Ingresar tu monto del prestamo">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group has-validation">
+                            <span class="Valo" id="inputGroupPrepend">%</span>
+                        <input type="text" class="form-control    controls" id="interes" placeholder="ingrese el porcentaje de interes">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control    controls" id="tiempo" placeholder="Ingresar a cuantos años o meses quieres pagar">
+                    </div>
+    
+                    <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error"> debes llenar todos los campos </div>
+                    <p>Estoy de acuerdo con <a href="">Terminos y condiciones </a></p>
+                    <input type="submit" class="botons " value="CALCULAR PRESTAMO" id="btnCalcular" onclick="Mostrar_Ocultar();"></input>
+                    <!-- <button type="reset" class="btn btn-secundary" id="ret">BORRAR</button> -->
+                </div>
+                <div class="hide" id="hideResul">
+                    <div class="col-6  ">
+                        <table id="lista-tabla" class="table">
+                            <h4>Este fue el resultado</h4>
+                            <thead>
+                                <tr>
+        
+                                    <!-- <th>Pagar por Mes</th>
+                                    <th>Capital</th>
+                                    <th>Total de Interés</th>
+                                    <th>Total a Pagar</th> -->
+                                    <th>Pagar por Mes</th>
+                                    <!-- <th>Capital</th> -->
+                                    <th>Total de Interés</th>
+                                    <th>Total a Pagar</th>
+                                </tr>
+                             
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <button type="submit" class="btn btn-primary   botons" id="botonAlertEnviar" value="">¡LISTO! EN BREVE RECIBIRAS UN MAIL</button>
+                        <!-- <input type="submit" value="X"  onclick="ocultarResul();" id="ocultar"></input> -->
+                  
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+
+               </section>
+              </form>
+             

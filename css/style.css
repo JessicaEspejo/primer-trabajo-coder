@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+
+}
+input,form,th,button{
+    font-style: italic;
+    font-family: 'popping',sans-serif;
+}
+
+
+/* cuadro */
+.box{
+    background: #23242a;
+}
+.box::before{
+    content: '';
+    left: -50%;
+    top: -50%;
+    width: 700px;
+  height: 800px;
+  background: linear-gradient(0deg,transparent, transparent, rgb(234, 255, 9));
+}
+/* fin */
+
+/*son pa<ra que funcione ocultar y cerrar el resultaod*/
+#hideResul{
+    display: none;
+}
+.show{
+    display: block;
+} 
+
+
+.container{
+    background: #fff;
+    width: 600px;
+    max-width: 600px;
+    padding: 55px 40px 10px 40px ;
+    box-shadow: 60px, 60px,60px rgba(0,0,0,0.5);
+}
+
+.container .text{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    /*aprender que el color de un tetto se convierta a dos colores*/
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.container form{
+    padding: 20px 0 0 0 0;
+}
+.container form .form-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3px 2px;
+
+}
+
+form .form-row .input-data{
+    width: 100%;
+    height: 80px;
+ 
+    position: relative;
+}
+
+form .form-row .textarea{
+    height: 80px;
+}
+
+.input-data input,
+.texttarea input{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.251);
+}
+
+
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label{
+    transform: translateY(-50px) ;
+    color: #3498db;
+    font-size: 14px;
+
+}
+.input-data label{
+    position: absolute;
+    bottom: 1px;
+    color:rgba(16, 16, 16, 0.545);
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.textarea label{
+width: 100%;
+bottom: 40px;
+background: #fff;
+}
+.input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width:100%;
+
+}
+
+
+.input-data .underline::before,
+.input-data .underline::after{
+    position: absolute;
+    content:"";
+ 
+    height: 100%;
+    width:100%;
+    background: #4585c4;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+}
+.input-data input:focus ~ .underline::before, .underline::after, 
+.textarea textarea:focus ~ .underline::before, .underline::after,
+.input-data input:focus ~ .underline::before, .underline::after, 
+.textarea textarea:focus ~ .underline::before, .underline::after
+{
+    transform: scaleX(1);
+}
+
+
+
+/* boton */
+.but{
+    display:flex;
+    justify-content: space-around;
+  
+}
+button{
+    margin: 1em;
+    border: radius 10px;
+    padding:.5em;
+    width:30em;
+    height:2em;
+    font-size:1em;
+        font-weight: 600;
+   color: linear-gradient(115deg, #56d8e4 10%, #af8ac0 90%);
+border:none;
+}
+.btn5{
+    background: transparent;
+    border-style:solid;
+    animation: rotate 3s infinite;
+    border-color:  #ac3bce #4582c7;
+    color:  #3498db;
+}
+
+@keyframes rotate{
+    50%{
+        border-color:  #ae72c1 #4582c7;
+    }
+    100%{
+        border-color:   #45c786 #767a5c;
+    }
+}
+/* boton calculo */
+.button-w{
+    display:flex;
+    justify-content: space-around;
+    margin: 3em 1em 1em 1em;
+}
+.btn-neon{
+    position:relative;
+    display:inline-block;
+    padding:5px 0px;
+    letter-spacing:1px;
+    font-size:20px;
+    text-decoration:none;
+    overflow:hidden;
+    transition:0.2s;
+    color:  #3498db;
+}
+
+.btn-neon:hover{
+    color:  #ae72c1 ;
+    box-shadow: 0 0 10px #45b6c7, 0 0 40px #a945c7, 0 0 80px #767a5c;
+    transition-delay:0.2s;
+}
+.btn-neon span{
+    position:absolute;
+    display: block;
+}
+#span1{
+    top:0;
+    left:-100%;
+    width:100%;
+    height:2px;
+    background: linear-gradient(90deg, transparent,   #45c786);
+}
+.btn-neon:hover #span1{
+    left:100%;
+    transition:0.1s;
+
+}
+
+#span3{
+    bottom:0;
+    right:-100%;
+    width:100%;
+    height:2px;
+    background: linear-gradient(270deg, transparent,#a945c7)
+}
+.btn-neon:hover #span3{
+    right:100%;
+    transition:0.3s ;
+    transition-delay: 0.5s ;
+
+}
+
+#span2{
+    top:-100%;
+    right:0;
+    width:2%;
+    height:100%;
+    background: linear-gradient(180deg, transparent,#a945c7)
+}
+.btn-neon:hover #span2{
+    right:100%;
+    transition:1s;
+    transition-delay: 0.5s;
+}
+#span4{
+    bottom:-100%;
+    left:0;
+    width:2px;
+    height:100%;
+    background: linear-gradient(360deg, transparent,#45c786)
+}
+.btn-neon:hover #span1{
+  bottom:100%;
+    transition:1s;
+    transition-delay: 0.5s;
+}
+
+/* fin boton */
+/* tabvla */
+
+table{
+    padding:10px;
+    color:rgb(246, 235, 235);
+    table-layout:fixed;
+   border-collapse:collapse;
+   background: linear-gradient(115deg, #7abec5 10%, #b87fd2 90%);
+}
+
+
+thead{
+    background:rgba(210, 103, 243, 0.4) ;
+    font-weight: 700;
+    font-size:25px;
+    text-transform: uppercase;
+    
+}
+td{
+    padding:35px;
+    font-size:20px;
+    font-weight: 900;
+    border-bottom: solid 1px rgba(35, 34, 34, 0.2);
+    color:rgba(58, 59, 64, 0.836);
+}
+tbody tr{
+    cursor: pointer;
+
+}
+tbody tr:hover{
+    background:rgba(255, 255, 255, 0.4);
+}
+
+.container-tabla{
+    margin: 1rem;
+    background: #fff;
+    width: 600px;
+    max-width: 600px;
+    padding: 5px 10px 10px 5px ;
+}
+
+.container-tabla .text-tabla{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    /*aprender que el color de un tetto se convierta a dos colores*/
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.container-formu{
+    background: #fff;
+    width: 500px;
+    height:300px;
+    padding: 15px 10px 10px 15px ;
+}
+
+
+
+/* firmulario parqaingresar datios */
+.cuadrol{
+margin: 2rem;
+}
+.Form-u{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #23242a;
+    z-index: 10;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction:column;
+
+}
+.inputBox{
+    position: relative;
+    width:300px;
+    margin-top: 35px;
+
+}
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border:none;
+    outline:none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+   z-index: 10;
+}
+
+.inputBox span{
+position: absolute;
+left: 0;
+padding: 20px 0px 10px;
+font-size: 1em;
+color: #000000;
+pointer-events: none;
+transition: 0.5s;
+
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:valid ~ span{
+    color:   #2f6fc8;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em
+}
+
+.inputBox  i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background:  #4582c7;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+height:4px;
+
+}
+
+/* fin */
+
+
+/* botone de borrar */
+.fot{
+    display: flex;
+    justify-content: space-between;
+}
+/* fin */
+
+/*ale de rellenaet*/
+.alert{
+    background: #ffdb9b;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    border-radius:4px;
+    border-left: 8px solid #ffa502;
+}
+
+.alert.show{
+    animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+.alert.hide{
+display: none;
+}
+.alert .fa-exclamation-circle{
+    position: absolute;
+    left: 20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#ce8500;
+    font-size: 30px;
+}
+
+.alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: #ce8500;
+}
+.alert .close-btn{
+    position:absolute;
+    right:0px;
+    top:50%;
+    transform: translateY(-50%);
+    background: #ffd080;
+    padding: 20px 18px;
+    cursor: pointer;
+}
+.close-btn:hover{
+    background: #ffc7ff;
+}
+.close-btn .fa-times{
+color: #ce8500;
+font-size: 22px;
+line-height: 40px;
+}
+/*alerta*/
+
+/*alet*/
+.bu{
+    
+background-color: #ffffff;
+border: 0;
+border-radius: 5px;
+box-shadow: 5px;
+color: #3498db;
+font-size: 15px;
+padding: 10px 25px;
+}
+.bu-c{
+    display: flex;
+    justify-content: center;
+}
+
+.MODAL_CONTAINER{
+    display: flex;
+    background-color:  rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content:center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.SHOW{
+    pointer-events: auto;
+    opacity: 1;
+    }
+    
+
+.MODAL{
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius:5px;
+    box-shadow:0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+
+}
+
+
+
+.MODAL h1{
+    margin: 0;
+}
+.MODAL p{
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+
+
+
+@media (max-width: 700px){
+    .container .text{
+        font-size: 30px;
+    }
+    .container form{
+        padding: 10px 0 0 0 0;
+    }
+    .container form .form-row{
+        display: block;
+    }
+    form .form-row .input-data{
+        margin: 35px 0!important;
+    }
+
+}

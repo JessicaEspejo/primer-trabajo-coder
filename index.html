@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>proyecto 1</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fondo.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.click').click(function(){
+          $('.popup_box').css("display", "block");
+        });
+        $('.btn1').click(function(){
+          $('.popup_box').css("display", "none");
+        });
+      });
+
+    </script>
+</head>
+
+
+<body>
+    <div class="contenedor_loader">
+        <div id="loader"></div>
+    </div>
+
+    <div class="box">
+        <div class="container">
+            <div class="text"> Calcular Prestamo </div>
+            <form class=" needs-validation" id="formul">
+                <div class="form-row">
+                    <div class="input-data">
+
+                        <input type="text" class="form-control      controls" id="monto" placeholder="" required>
+                        <div class="underline"></div>
+                        <label for="">($) Ingresar tu monto del prestamo ($)</label>
+                    </div>
+                    <div class="input-data">
+
+                        <input type="text" class="form-control    controls" id="interes" placeholder="" required>
+                        <div class="underline"></div>
+                        <label for="">(%) Ingrese el porcentaje de interes (%)</label>
+                    </div>
+                    <div class="input-data">
+
+                        <input type="text" class="form-control    controls" id="tiempo" placeholder="" required>
+                        <div class="underline"></div>
+                        <label>__Ingresar a cuantos años o meses quieres pagar__</label>
+                    </div>
+                    <!-- alerta obligatorio -->
+                    <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error"> debes llenar todos los
+                        campos </div>
+                    <div class="outer button-w">
+                        <a type="submit" class="btn-neon" value="" id="btnCalcular" onclick="Mostrar_Ocultar();">
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                            Calcular prestamo</a>
+                    </div>
+                    <!-- <button type="reset" class="btn btn-secundary" id="ret">BORRAR</button> -->
+
+                </div>
+        </div>
+  
+
+    <div class="container-tabla" id="hideResul">
+
+        <table id="lista-tabla" class="table">
+            <div class="cuadrol">
+                <div class="text-tabla">Llene sus datos</div>
+                <form action="" class="Form-u">
+                    <div class="inputBox">
+                        <input type="text" required>
+                        <span>Ingresa tu nombre completo</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" required>
+                        <span>Ingrese su correo </span>
+                        <i></i>
+                    </div>
+                </form>
+            </div>
+            <div class="text-tabla">Este fue el resultado</div>
+            <thead>
+                <tr>
+
+                    <!-- <th>Pagar por Mes</th>
+                                    <th>Capital</th>
+                                    <th>Total de Interés</th>
+                                    <th>Total a Pagar</th> -->
+                    <th>Pagar por Mes</th>
+                    <!-- <th>Capital</th> -->
+                    <th>Total de Interés</th>
+                    <th>Total a Pagar</th>
+                </tr>
+
+            </thead>
+            <tbody></tbody>
+        </table>
+  <div class="bu-c">
+    <button class="bu btn5" id="BTN-ABRIR-MODAL">¡Obten tu prestamo con un click !</button>
+    <dialog class="MODAL"  id="MODAL">
+         <h2>¡Hola!</h2>
+         <p>En lo que dure este Popup te estaremos enviando un mail a tu correo.</p>
+     <button id="BTN-CERRAR-MODAL" class="bu">Cerrar</button>
+    </dialog>
+
+  </div>
+     
+       </div>
+    </div>
+        
+        </div>
+
+    </div>
+   
+    <!-- <a type="button" class="button btn5"  value="">¡obten tu prestamo con un click !</a> -->
+    <!-- <input type="submit" value="X"  onclick="ocultarResul();" id="ocultar"></input> -->
+</div>
+
+
+    <script src="js/amortizacion.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/cargando.js"></script>
+    <!-- alertaboton enviar correo-->
+<script src="js/btnAlert.js"></script>
+    <!-- alerta -->
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/sweetAlert.js"></script>
+    <script src="js/terminos.js"></script>
+     <!-- finalerta -->
+
+
+</body>
+
+
+</html>
